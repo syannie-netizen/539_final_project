@@ -196,7 +196,76 @@
      background-color: rgba(255, 255, 255, 0.25);
      color: var(--surface);
    }
-   
+
+   .recommend-layout {
+     display: grid;
+     grid-template-columns: 1.2fr 0.8fr;
+     gap: 2rem;
+     align-items: start;
+   }
+
+   .recommend-form {
+     display: flex;
+     flex-direction: column;
+     gap: 1.5rem;
+   }
+
+   .field-group {
+     display: flex;
+     flex-direction: column;
+     gap: 0.75rem;
+   }
+
+   .chip-list {
+     display: flex;
+     flex-wrap: wrap;
+     gap: 0.75rem;
+   }
+
+   .chip {
+     appearance: none;
+     background-color: rgba(255, 255, 255, 0.06);
+     color: var(--on-surface);
+     border: 1px solid rgba(255, 255, 255, 0.12);
+     padding: 0.5rem 0.85rem;
+     font-size: 0.75rem;
+     cursor: pointer;
+     transition: background-color 0.2s, border-color 0.2s;
+   }
+
+   .chip:hover,
+   .chip:focus {
+     background-color: rgba(255, 255, 255, 0.12);
+     border-color: rgba(255, 255, 255, 0.2);
+     outline: none;
+   }
+
+   .form-actions {
+     display: flex;
+     justify-content: flex-end;
+   }
+
+   .recommend-terminal .terminal-window {
+     background-color: rgba(255, 255, 255, 0.02);
+   }
+
+   .recommend-terminal .terminal-header {
+     background-color: rgba(255, 255, 255, 0.04);
+   }
+
+   .recommend-terminal .terminal-body {
+     font-family: var(--font-mono);
+     color: var(--on-surface);
+     opacity: 0.82;
+     white-space: pre-wrap;
+   }
+
+   @media (max-width: 992px) {
+     .recommend-layout {
+       grid-template-columns: 1fr;
+     }
+   }
+
    /* Terminal Window Component */
    .terminal-window {
      background-color: var(--surface);

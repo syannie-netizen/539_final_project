@@ -44,30 +44,80 @@
     </header>
 
     <main class="container" style="padding-top: 120px; min-height: 100vh; position: relative; z-index: 10;">
-        <div class="label mb-2 text-cyan">// PROTOCOL: UPLOAD_DATA</div>
-        <h1 class="display-lg mb-8" style="font-size: 2.5rem;">TRANSMIT_RECOMMENDATION</h1>
+        <section class="section-low" style="border-bottom: 1px solid var(--outline-variant);">
+            <div class="container">
+                <div class="label mb-2">// SUBMIT RECOMMENDATION</div>
+                <h1 class="display-lg mb-8">Recommend a Song</h1>
+                <p style="color: var(--on-surface); font-size: 1rem; line-height: 1.8; max-width: 600px; font-weight: 100; margin-bottom: 2rem;">
+                    Share your favorite Japanese music and help others discover great songs.
+                </p>
 
-        <div class="terminal-window" style="max-width: 600px;">
-            <div class="terminal-header">
-                <span class="label text-secondary">INPUT_REQUIRED</span>
-            </div>
-            <div class="terminal-body">
-                <form action="#" method="POST" onsubmit="event.preventDefault(); alert('DATA TRANSMITTED TO MAIN SERVER');">
-                    <label class="label text-cyan">ARTIST_NAME</label>
-                    <input type="text" class="terminal-input" placeholder="e.g. Vaundy" required>
+                <div class="recommend-layout">
+                    <div class="recommend-form">
+                        <form action="#" method="POST" onsubmit="event.preventDefault(); alert('DATA TRANSMITTED TO MAIN SERVER');">
+                            <div class="field-group">
+                                <label class="label text-cyan">YOUR NAME</label>
+                                <input type="text" class="terminal-input" placeholder="Enter your name (optional)">
+                            </div>
 
-                    <label class="label text-cyan">TRACK_TITLE</label>
-                    <input type="text" class="terminal-input" placeholder="e.g. Kaiju no Hanauta" required>
+                            <div class="field-group">
+                                <label class="label text-cyan">TRACK TITLE</label>
+                                <input type="text" class="terminal-input" placeholder="Enter the song title" required>
+                            </div>
 
-                    <label class="label text-cyan">WHY_THIS_TRACK (OPTIONAL)</label>
-                    <textarea class="terminal-input" rows="3" placeholder="Input analysis data..."></textarea>
+                            <div class="field-group">
+                                <label class="label text-cyan">ARTIST / BAND</label>
+                                <input type="text" class="terminal-input" placeholder="Enter artist or band name" required>
+                            </div>
 
-                    <div style="display: flex; justify-content: flex-end; margin-top: 1rem;">
-                        <button type="submit" class="btn-primary">> INITIATE_UPLOAD</button>
+                            <div class="field-group">
+                                <label class="label text-cyan">GENRE</label>
+                                <div class="chip-list">
+                                    <button type="button" class="chip">J-pop</button>
+                                    <button type="button" class="chip">J-rock</button>
+                                    <button type="button" class="chip">City Pop</button>
+                                    <button type="button" class="chip">Future Bass</button>
+                                    <button type="button" class="chip">R&B</button>
+                                    <button type="button" class="chip">Indie</button>
+                                    <button type="button" class="chip">Electronic</button>
+                                    <button type="button" class="chip">Ballad</button>
+                                </div>
+                            </div>
+
+                            <div class="field-group">
+                                <label class="label text-cyan">LINK</label>
+                                <input type="text" class="terminal-input" placeholder="Spotify / YouTube / Apple Music link">
+                            </div>
+
+                            <div class="field-group">
+                                <label class="label text-cyan">WHY THIS TRACK?</label>
+                                <textarea class="terminal-input" rows="4" placeholder="Why do you recommend this song?"></textarea>
+                            </div>
+
+                            <div class="form-actions">
+                                <button type="submit" class="btn-primary">&gt; SUBMIT RECOMMENDATION</button>
+                            </div>
+                        </form>
                     </div>
-                </form>
+
+                    <div class="recommend-terminal">
+                        <div class="terminal-window" style="min-height: 440px;">
+                            <div class="terminal-header">
+                                <div style="display: flex; align-items: center; gap: 0.5rem;">
+                                    <span class="terminal-dot active"></span>
+                                    <span class="terminal-dot"></span>
+                                    <span class="terminal-dot"></span>
+                                </div>
+                                <span class="label" style="margin-left: auto;">submit.terminal</span>
+                            </div>
+                            <div class="terminal-body" style="min-height: 360px; padding: 1.5rem;">
+                                <p style="color: var(--primary);">&gt; ready to receive recommendation...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
+        </section>
     </main>
 
     <script src="js/script.js"></script>
