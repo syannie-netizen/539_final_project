@@ -24,8 +24,76 @@
     </header>
 
     <main class="container" style="padding-top: 120px; min-height: 100vh;">
-        <div class="label mb-2 text-cyan">// FULL TRACK LIST</div>
-        <h1 class="display-lg mb-8" style="font-size: 2.5rem;">所有歌曲</h1>
+        <section class="section-low" style="border-bottom: 1px solid var(--outline-variant);">
+            <div class="container">
+                <div class="label mb-2">// MUSIC GALLERY</div>
+                <h1 class="display-lg mb-8">Featured Music</h1>
+                <p style="color: var(--on-surface); font-size: 1rem; line-height: 1.8; max-width: 600px; font-weight: 100;">
+                    Swipe left and right to browse my curated J-pop music selection.
+                </p>
+            </div>
+        </section>
+
+        <div class="album-gallery">
+            <div class="gallery-scroll scrollbar-hide">
+                <article class="album-card">
+                    <div class="album-card-header">
+                        <span>TRACK 01</span>
+                        <span>4:34</span>
+                    </div>
+                    <div class="album-cover cover-rose">
+                        <button class="cover-play">▶</button>
+                    </div>
+                    <div class="album-card-body">
+                        <h2>白日</h2>
+                        <p>King Gnu</p>
+                        <p>CEREMONY · 2020</p>
+                    </div>
+                </article>
+                <article class="album-card">
+                    <div class="album-card-header">
+                        <span>TRACK 02</span>
+                        <span>4:18</span>
+                    </div>
+                    <div class="album-cover cover-blue">
+                        <button class="cover-play">▶</button>
+                    </div>
+                    <div class="album-card-body">
+                        <h2>夜に駆ける</h2>
+                        <p>YOASOBI</p>
+                        <p>THE BOOK · 2019</p>
+                    </div>
+                </article>
+                <article class="album-card">
+                    <div class="album-card-header">
+                        <span>TRACK 03</span>
+                        <span>4:12</span>
+                    </div>
+                    <div class="album-cover cover-amber">
+                        <button class="cover-play">▶</button>
+                    </div>
+                    <div class="album-card-body">
+                        <h2>残響散歌</h2>
+                        <p>Aimer</p>
+                        <p>Walpurgis · 2022</p>
+                    </div>
+                </article>
+                <article class="album-card">
+                    <div class="album-card-header">
+                        <span>TRACK 04</span>
+                        <span>3:45</span>
+                    </div>
+                    <div class="album-cover cover-emerald">
+                        <button class="cover-play">▶</button>
+                    </div>
+                    <div class="album-card-body">
+                        <h2>リセット</h2>
+                        <p>向井太一</p>
+                        <p>SAVAGE · 2019</p>
+                    </div>
+                </article>
+            </div>
+        </div>
 
         <div class="terminal-window mt-4">
             <div class="terminal-header">
@@ -139,8 +207,25 @@
                 </div>
             </div>
         </div>
+     <section class="section-low" style="border-top: 1px solid var(--outline-variant);">
+                <div style="display: flex; align-items: center; justify-content: space-between; gap: 1.5rem;">
+                    <p style="color: var(--on-surface); margin-bottom: 0;">Want to share your favorite music?</p>
+                    <a href="recommend.html" class="btn-primary">&gt; Recommend an Artist</a>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <script src="js/script.js"></script>
+ <script src="js/script.js"></script>
+    <footer class="terminal-footer">
+        <div class="container footer-content">
+            <div class="font-mono text-cyan" style="font-weight: bold;">
+                > JPOP<span style="color: var(--primary)">.terminal_</span>
+            </div>
+            <div class="label" style="color: var(--outline-variant); text-transform: none; letter-spacing: 0.05em;">
+                // Built with love for Japanese music
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
