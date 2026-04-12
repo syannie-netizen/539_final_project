@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JPOP.terminal // RECOMMEND</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Specific Form Styles for Tactical Form */
+        .terminal-input {
+            width: 100%;
+            background-color: transparent;
+            border: none;
+            border-bottom: 1px solid var(--outline-variant);
+            color: var(--primary);
+            font-family: var(--font-mono);
+            padding: 12px 0;
+            margin-bottom: 24px;
+            font-size: 1rem;
+        }
+        .terminal-input:focus {
+            outline: none;
+            border-bottom-color: var(--primary-container);
+            box-shadow: 0 2px 0 0 rgba(0, 251, 251, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="scanlines"></div>
+    <div class="halftone" style="left: 0; width: 30%; right: auto; transform: scaleX(-1);"></div>
+
+    <header class="nav-header">
+        <div class="container nav-content">
+            <div class="logo font-mono text-cyan">
+                > JPOP<span style="color: var(--primary)">.terminal</span><span class="cursor-blink">_</span>
+            </div>
+            <nav class="nav-links">
+                <a href="index.html">./home</a>
+                <a href="artists.html">./artists</a>
+                <a href="music.html">./music</a>
+                <a href="recommend.html" class="active">./recommend</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container" style="padding-top: 120px; min-height: 100vh; position: relative; z-index: 10;">
+        <div class="label mb-2 text-cyan">// PROTOCOL: UPLOAD_DATA</div>
+        <h1 class="display-lg mb-8" style="font-size: 2.5rem;">TRANSMIT_RECOMMENDATION</h1>
+
+        <div class="terminal-window" style="max-width: 600px;">
+            <div class="terminal-header">
+                <span class="label text-secondary">INPUT_REQUIRED</span>
+            </div>
+            <div class="terminal-body">
+                <form action="#" method="POST" onsubmit="event.preventDefault(); alert('DATA TRANSMITTED TO MAIN SERVER');">
+                    <label class="label text-cyan">ARTIST_NAME</label>
+                    <input type="text" class="terminal-input" placeholder="e.g. Vaundy" required>
+
+                    <label class="label text-cyan">TRACK_TITLE</label>
+                    <input type="text" class="terminal-input" placeholder="e.g. Kaiju no Hanauta" required>
+
+                    <label class="label text-cyan">WHY_THIS_TRACK (OPTIONAL)</label>
+                    <textarea class="terminal-input" rows="3" placeholder="Input analysis data..."></textarea>
+
+                    <div style="display: flex; justify-content: flex-end; margin-top: 1rem;">
+                        <button type="submit" class="btn-primary">> INITIATE_UPLOAD</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/script.js"></script>
+    <footer class="terminal-footer">
+        <div class="container footer-content">
+            <div class="font-mono text-cyan" style="font-weight: bold;">
+                > JPOP<span style="color: var(--primary)">.terminal_</span>
+            </div>
+            <div class="label" style="color: var(--outline-variant); text-transform: none; letter-spacing: 0.05em;">
+                // Built with love for Japanese music
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

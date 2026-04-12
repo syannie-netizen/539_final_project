@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JPOP.terminal // HOME</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="display: flex; flex-direction: column; min-height: 100vh;">
+    <div class="scanlines"></div>
+
+    <header class="nav-header">
+        <div class="container nav-content">
+            <div class="logo font-mono text-cyan">
+                > JPOP<span style="color: var(--primary)">.terminal</span><span class="cursor-blink">_</span>
+            </div>
+            <nav class="nav-links">
+                <a href="index.html" class="active">./home</a>
+                <a href="artists.html">./artists</a>
+                <a href="music.html">./music</a>
+                <a href="recommend.html">./recommend</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="halftone"></div>
+            <div class="container hero-content-wrapper">
+                <div id="hero-content" style="opacity: 0; transform: translateY(20px); transition: all 0.5s ease-out;">
+                    <div class="label mb-2">// JAPANESE POP MUSIC ARCHIVE</div>
+                    <h1 class="display-lg mb-8">
+                        EXPLORE<br>
+                        <span class="text-cyan">THE SOUND</span><br>
+                        OF J-POP
+                    </h1>
+                    <div style="display: flex; gap: 1rem;">
+                        <a href="artists.html" class="btn-primary">> EXECUTE_SEARCH</a>
+                    </div>
+                </div>
+
+                <div class="terminal-window">
+                    <div class="terminal-header">
+                        <div class="terminal-dot active"></div>
+                        <div class="terminal-dot"></div>
+                        <div class="terminal-dot"></div>
+                        <span class="label" style="margin-left: auto;">SYS.BOOT</span>
+                    </div>
+                    <div class="terminal-body" id="terminal-lines">
+                        </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-low" ">
+            <div class="container" style="display: grid; grid-template-columns: 1fr 2fr; gap: 4rem; align-items: start;">
+                <div>
+                    <div class="label mb-2 text-cyan">// ABOUT J-POP</div>
+                    <h2 class="title" style="font-size: 2rem; color: var(--primary);">什么是 J-POP？</h2>
+                </div>
+                <div style="color: var(--on-surface); font-size: 1rem; line-height: 1.8;">
+                    <p class="mb-4">
+                        J-pop，即日本流行音乐（Japanese Pop），是指日本的现代流行音乐。它不仅仅是一种音乐风格，更是一种文化现象，融合了摇滚、电子、嘻哈、R&B 等多种元素，形成了独特的音乐美学。
+                    </p>
+                    <p>
+                        从 80 年代的 City Pop 黄金时代，到如今的 YOASOBI、King Gnu 等新生代艺术家，J-pop 始终在不断进化，用音乐讲述动人的故事。
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-low" style="background-color: var(--surface);">
+            <div class="container">
+                <div class="label mb-2 text-cyan">// FEATURES</div>
+                <h2 class="title mb-8" style="font-size: 2rem; color: var(--primary);">J-POP 的独特魅力</h2>
+                
+                <div class="card-grid" style="grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));">
+                    <div class="card" style="background-color: var(--surface-container-low);">
+                        <div class="label text-cyan">01</div>
+                        <h3 class="mt-4 mb-2 title" style="font-size: 1rem; color: var(--primary);">独特的音乐融合</h3>
+                        <p style="color: var(--on-surface); font-size: 0.875rem;">J-pop 融合了西方流行、摇滚、电子与日本传统音乐元素</p>
+                    </div>
+                    <div class="card" style="background-color: var(--surface-container-low);">
+                        <div class="label text-cyan">02</div>
+                        <h3 class="mt-4 mb-2 title" style="font-size: 1rem; color: var(--primary);">视觉与音乐结合</h3>
+                        <p style="color: var(--on-surface); font-size: 0.875rem;">MV 制作精良，视觉艺术与音乐叙事完美融合</p>
+                    </div>
+                    <div class="card" style="background-color: var(--surface-container-low);">
+                        <div class="label text-cyan">03</div>
+                        <h3 class="mt-4 mb-2 title" style="font-size: 1rem; color: var(--primary);">多样化的风格</h3>
+                        <p style="color: var(--on-surface); font-size: 0.875rem;">从 City Pop 到 Future Bass，风格横跨数十种流派</p>
+                    </div>
+                    <div class="card" style="background-color: var(--surface-container-low);">
+                        <div class="label text-cyan">04</div>
+                        <h3 class="mt-4 mb-2 title" style="font-size: 1rem; color: var(--primary);">情感共鸣</h3>
+                        <p style="color: var(--on-surface); font-size: 0.875rem;">细腻的歌词与旋律，触动内心最深处的情感</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-low"">
+            <div class="container" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                <div class="label mb-2 text-cyan">// GET STARTED</div>
+                <h2 class="title mb-8" style="font-size: 2rem; color: var(--primary);">准备好探索 J-POP 的世界了吗？</h2>
+                <a href="recommend.html" class="btn-primary" style="font-size: 1.1rem; padding: 16px 32px;">> 分享你的推荐</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="terminal-footer">
+        <div class="container footer-content">
+            <div class="font-mono text-cyan" style="font-weight: bold;">
+                > JPOP<span style="color: var(--primary)">.terminal_</span>
+            </div>
+            <div class="label" style="color: var(--outline-variant); text-transform: none; letter-spacing: 0.05em;">
+                // Built with love for Japanese music
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

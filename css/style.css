@@ -1,0 +1,281 @@
+/* =========================================
+   DESIGN SYSTEM: Tactical Retro-Futurism
+   ========================================= */
+
+   @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100..800&display=swap');
+
+   :root {
+     /* Surfaces (Depth via tonal layering) */
+     --surface: #131313;
+     --surface-container-low: #1c1b1b;
+     --surface-container-high: #2a2a2a;
+     --surface-container-highest: rgba(53, 53, 52, 0.8); /* For glassmorphism */
+     
+     /* Typography & Signals */
+     --on-surface: #e5e2e1;
+     --primary: #ffffff;
+     --on-primary: #003737;
+     --primary-container: #00fbfb;
+     --secondary: #ffabf3;
+     --secondary-container: #fe00fe;
+     --outline-variant: rgba(58, 74, 73, 0.2);
+     --error: #ffb4ab;
+   
+     --font-mono: 'JetBrains Mono', monospace;
+   }
+   
+   /* Base Reset */
+   * {
+     box-sizing: border-box;
+     margin: 0;
+     padding: 0;
+     border-radius: 0 !important; /* STRICT 0px RADIUS RULE */
+   }
+   
+   body {
+     background-color: var(--surface);
+     color: var(--on-surface);
+     font-family: var(--font-mono);
+     font-size: 1rem;
+     line-height: 1.4;
+     overflow-x: hidden;
+   }
+   
+   /* -----------------------------------------
+      TEXTURES & OVERLAYS
+      ----------------------------------------- */
+
+   /* 修改：放大波点和网格尺寸，增强颗粒感 */
+/* 修改：确保 halftone 只在父级容器内溢出隐藏 */
+.hero-section {
+    position: relative;
+    padding-top: 100px;
+    min-height: 80vh;
+    overflow: hidden; /* 重要：防止波点溢出到下方 Section */
+    display: flex;
+    align-items: center;
+}
+
+.halftone {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60%;
+    height: 100%;
+    /* 保持你要求的放大波点 */
+    background-image: radial-gradient(circle, var(--secondary) 2px, transparent 2.5px);
+    background-size: 24px 24px;
+    opacity: 0.15;
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* 确保文字和终端在波点上方 */
+.hero-content-wrapper {
+    position: relative;
+    z-index: 10;
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    gap: 4rem; 
+    align-items: center;
+    width: 100%;
+}
+   /* -----------------------------------------
+      TYPOGRAPHY
+      ----------------------------------------- */
+   .display-lg {
+     font-size: 3.5rem;
+     font-weight: 300;
+     text-transform: uppercase;
+     letter-spacing: -0.02em;
+     line-height: 1.1;
+     color: var(--primary);
+   }
+   
+   .title {
+     font-size: 1.5rem;
+     font-weight: 500;
+     text-transform: uppercase;
+     color: var(--primary-container);
+     letter-spacing: 0.05em;
+   }
+   
+   .label {
+     font-size: 0.75rem;
+     text-transform: uppercase;
+     letter-spacing: 0.1em;
+     color: var(--secondary);
+   }
+   
+   /* -----------------------------------------
+      LAYOUT & SURFACES
+      ----------------------------------------- */
+   .container {
+     max-width: 1200px;
+     margin: 0 auto;
+     padding: 0 2rem;
+   }
+   
+   .nav-header {
+     position: fixed;
+     top: 0;
+     width: 100%;
+     background-color: var(--surface-container-highest);
+     backdrop-filter: blur(8px);
+     z-index: 1000;
+     border-bottom: 1px solid var(--outline-variant);
+   }
+   
+   .nav-content {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     height: 64px;
+   }
+   
+   .nav-links {
+     display: flex;
+     gap: 2rem;
+   }
+   
+   .nav-links a {
+     color: var(--on-surface);
+     text-decoration: none;
+     text-transform: uppercase;
+     font-size: 0.875rem;
+     transition: color 0.2s;
+   }
+   
+   .nav-links a:hover, .nav-links a.active {
+     color: var(--primary-container);
+   }
+   
+   .section-low {
+     border-top: #b6b6b64f 0.1px solid;
+     padding: 5rem 0 5rem;
+   }
+   
+   /* -----------------------------------------
+      COMPONENTS
+      ----------------------------------------- */
+   /* Primary Button */
+   .btn-primary {
+     display: inline-block;
+     background-color: var(--primary);
+     color: var(--on-primary);
+     padding: 12px 24px;
+     text-transform: uppercase;
+     text-decoration: none;
+     font-weight: bold;
+     letter-spacing: 0.1em;
+     border: none;
+     cursor: pointer;
+     transition: all 0.1s;
+   }
+   
+   .btn-primary:hover {
+     background-color: var(--primary-container);
+     color: var(--surface);
+   }
+   
+   /* Secondary Button */
+   .btn-secondary {
+     display: inline-block;
+     background-color: transparent;
+     color: var(--secondary);
+     border: 1px solid var(--secondary);
+     padding: 12px 24px;
+     text-transform: uppercase;
+     text-decoration: none;
+     letter-spacing: 0.1em;
+     cursor: pointer;
+   }
+   
+   .btn-secondary:hover {
+     background-color: var(--secondary);
+     color: var(--surface);
+   }
+   
+   /* Terminal Window Component */
+   .terminal-window {
+     background-color: var(--surface-container-high);
+     border: 1px solid var(--outline-variant);
+     width: 100%;
+   }
+   
+   .terminal-header {
+     background-color: var(--surface-container-lowest);
+     padding: 8px 16px;
+     display: flex;
+     align-items: center;
+     gap: 8px;
+     border-bottom: 1px solid var(--outline-variant);
+   }
+   
+   .terminal-dot {
+     width: 10px;
+     height: 10px;
+     background-color: var(--outline-variant);
+   }
+   .terminal-dot.active { background-color: var(--primary-container); }
+   
+   .terminal-body {
+     padding: 24px;
+     min-height: 250px;
+   }
+   
+   /* Cards */
+   .card-grid {
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+     gap: 16px;
+     margin-top: 2rem;
+   }
+   
+   .card {
+     background-color: var(--surface);
+     padding: 24px;
+     border: 1px solid transparent;
+     transition: border 0.2s, background-color 0.2s;
+   }
+   
+   .card:hover {
+     border: 1px solid var(--secondary);
+     background-color: var(--surface-container-low);
+   }
+   
+   /* -----------------------------------------
+      ANIMATIONS & UTILITIES
+      ----------------------------------------- */
+   .cursor-blink {
+     animation: blink 1s step-end infinite;
+     color: var(--primary-container);
+   }
+   
+   @keyframes blink {
+     0%, 100% { opacity: 1; }
+     50% { opacity: 0; }
+   }
+   
+   .hidden { display: none !important; }
+   .mt-2 { margin-top: 0.5rem; }
+   .mt-4 { margin-top: 1rem; }
+   .mb-2 { margin-bottom: 0.5rem; }
+   .mb-8 { margin-bottom: 2rem; }
+   .text-cyan { color: var(--primary-container); }
+
+
+   /* 在 :root 和 .dark 中添加或确保 primary 颜色接近暗粉色 */
+/* 根据你的 globals.css，--primary 目前是 oklch(0.75 0.15 350)，这已经是一个漂亮的粉紫色系 */
+
+@layer components {
+    .artist-card {
+      @apply relative border border-border bg-card/30 p-8 transition-all duration-500 ease-out;
+    }
+  
+    /* 鼠标悬浮时的暗粉色微光效果 */
+    .artist-card:hover {
+      @apply border-primary/50 bg-primary/[0.03];
+      box-shadow: 0 0 30px -10px rgba(191, 64, 191, 0.1); /* 淡淡的粉色光晕 */
+    }
+  }

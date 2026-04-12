@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JPOP.terminal // MUSIC</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="scanlines"></div>
+
+    <header class="nav-header">
+        <div class="container nav-content">
+            <div class="logo font-mono text-cyan">
+                > JPOP<span style="color: var(--primary)">.terminal</span><span class="cursor-blink">_</span>
+            </div>
+            <nav class="nav-links">
+                <a href="index.html">./home</a>
+                <a href="artists.html">./artists</a>
+                <a href="music.html" class="active">./music</a>
+                <a href="recommend.html">./recommend</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container" style="padding-top: 120px; min-height: 100vh;">
+        <div class="label mb-2 text-cyan">// QUERY: SELECT * FROM TRACKS_DB</div>
+        <h1 class="display-lg mb-8" style="font-size: 2.5rem;">AUDIO_LOGS</h1>
+
+        <div class="terminal-window mt-4">
+            <div class="terminal-header">
+                <span class="label">TRACK_INDEX.DAT</span>
+            </div>
+            <div class="terminal-body" style="padding: 0;">
+                <table style="width: 100%; text-align: left; border-collapse: collapse;">
+                    <thead>
+                        <tr style="border-bottom: 1px solid var(--outline-variant); background-color: var(--surface-container-low);">
+                            <th class="label" style="padding: 16px;">ID</th>
+                            <th class="label" style="padding: 16px;">TRACK_NAME</th>
+                            <th class="label" style="padding: 16px;">ARTIST</th>
+                            <th class="label" style="padding: 16px;">BPM</th>
+                            <th class="label" style="padding: 16px;">ACTION</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="border-bottom: 1px solid var(--outline-variant); transition: background-color 0.2s;">
+                            <td class="label text-cyan" style="padding: 16px;">0x01</td>
+                            <td style="padding: 16px; font-weight: bold;">HAKUJITSU (白日)</td>
+                            <td style="padding: 16px;">KING GNU</td>
+                            <td class="label" style="padding: 16px;">102</td>
+                            <td style="padding: 16px;"><button class="btn-secondary" style="padding: 4px 8px; font-size: 0.75rem;">> PLAY</button></td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid var(--outline-variant);">
+                            <td class="label text-cyan" style="padding: 16px;">0x02</td>
+                            <td style="padding: 16px; font-weight: bold;">IDOL (アイドル)</td>
+                            <td style="padding: 16px;">YOASOBI</td>
+                            <td class="label" style="padding: 16px;">166</td>
+                            <td style="padding: 16px;"><button class="btn-secondary" style="padding: 4px 8px; font-size: 0.75rem;">> PLAY</button></td>
+                        </tr>
+                        <tr>
+                            <td class="label text-cyan" style="padding: 16px;">0x03</td>
+                            <td style="padding: 16px; font-weight: bold;">ZANKYOSANKA (残響散歌)</td>
+                            <td style="padding: 16px;">AIMER</td>
+                            <td class="label" style="padding: 16px;">171</td>
+                            <td style="padding: 16px;"><button class="btn-secondary" style="padding: 4px 8px; font-size: 0.75rem;">> PLAY</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
