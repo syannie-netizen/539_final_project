@@ -23,56 +23,172 @@
         </div>
     </header>
 
-    <main class="section-low" style="padding-top: 120px; min-height: 100vh;">
-        <div class="container">
-            <div class="label mb-2">// DIRECTORY: /ARTISTS/REGISTERED</div>
-            <h1 class="display-lg mb-8" style="font-size: 2.5rem;">ARTIST_DATABANK</h1>
+    <main style="padding-top: 120px; min-height: 100vh;">
+        <!-- Header Section -->
+        <section class="section-low" style="border-bottom: 1px solid var(--outline-variant);">
+            <div class="container">
+                <div class="label mb-2">// ARTISTS COLLECTION</div>
+                <h1 class="display-lg mb-8">My Favorite <span style="color: var(--primary-container);">Artists</span></h1>
+                <p style="color: var(--on-surface); font-size: 1rem; line-height: 1.8; max-width: 600px; font-weight: 100;">
+                    These are my favorite Japanese music artists from my personal collection. From experimental rock to gentle R&B, each artist has a unique musical style and endless creativity.
+                </p>
+            </div>
+        </section>
 
-            <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 2rem; margin-top: 4rem;">
-                <div class="terminal-window" style="height: fit-content;">
-                    <div class="terminal-header">
-                        <span class="label text-cyan">FILTER_VECTORS</span>
-                    </div>
-                    <div class="terminal-body">
-                        <p class="label">> STATUS: ONLINE</p>
-                        <p class="label mt-2">> GENRE: ALL</p>
-                        <p class="label mt-2">> SORT: CHRONOLOGICAL</p>
-                    </div>
-                </div>
-
-                <div style="display: flex; flex-direction: column; gap: 1rem;">
-                    <div class="terminal-window" style="background-color: var(--surface);">
-                        <div class="terminal-body" style="display: flex; justify-content: space-between; align-items: center; padding: 16px 24px;">
-                            <div>
-                                <h2 class="title" style="color: var(--primary); margin-bottom: 4px;">KING GNU</h2>
-                                <p class="label text-cyan">CLASS: EXPERIMENTAL ROCK / TOKYO MIXTURE</p>
+        <!-- Artists Grid -->
+        <section class="section-low">
+            <div class="container">
+                <div style="display: flex; flex-direction: column; gap: 2rem;">
+                    <!-- Artist Card 1: King Gnu -->
+                    <div class="artist-card" style="display: grid; grid-template-columns: 300px 1fr; gap: 3rem; align-items: start;">
+                        <div>
+                            <div class="label mb-2" style="color: var(--primary-container);">01</div>
+                            <h2 class="title mb-2" style="font-size: 2rem;">King Gnu</h2>
+                            <p class="label" style="color: var(--primary-container); margin-bottom: 1.5rem;">キングヌー</p>
+                            <div style="display: flex; flex-direction: column; gap: 0.75rem; color: var(--on-surface); font-size: 0.875rem;">
+                                <p><strong>Genre:</strong> Alternative Rock / J-pop</p>
+                                <p><strong>Formed:</strong> 2017</p>
+                                <p><strong>Members:</strong> 4</p>
                             </div>
-                            <button class="btn-secondary" style="padding: 8px 16px;">> READ_FILE</button>
+                        </div>
+                        <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+                            <p style="color: var(--on-surface); line-height: 1.8; font-weight: 100;">
+                                King Gnu is one of Japan's most innovative rock bands of the contemporary era. They perfectly blend classical music training with modern rock and electronic elements, creating a unique "Tokyo New Mixture Style." The lead vocalist Tsuchiya Daiki is also a collaborator and arranger for artists like Mizuki Genshi.
+                            </p>
+                            <div>
+                                <p class="label mb-2">Representative Works</p>
+                                <div style="display: flex; flex-wrap: wrap; gap: 0.75rem;">
+                                    <span style="padding: 0.5rem 1rem; border: 1px solid rgba(255, 255, 255, 0.5); background-color: transparent; color: var(--on-surface); font-size: 0.875rem;">White Day</span>
+                                    <span style="padding: 0.5rem 1rem; border: 1px solid rgba(255, 255, 255, 0.5); background-color: transparent; color: var(--on-surface); font-size: 0.875rem;">Flying Boat</span>
+                                    <span style="padding: 0.5rem 1rem; border: 1px solid rgba(255, 255, 255, 0.5); background-color: transparent; color: var(--on-surface); font-size: 0.875rem;">BOY</span>
+                                    <span style="padding: 0.5rem 1rem; border: 1px solid rgba(255, 255, 255, 0.5); background-color: transparent; color: var(--on-surface); font-size: 0.875rem;">Chameleon</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="terminal-window" style="background-color: var(--surface);">
-                        <div class="terminal-body" style="display: flex; justify-content: space-between; align-items: center; padding: 16px 24px;">
-                            <div>
-                                <h2 class="title" style="color: var(--primary); margin-bottom: 4px;">YOASOBI</h2>
-                                <p class="label text-cyan">CLASS: NOVEL INTO MUSIC / SYNTH POP</p>
+                    <!-- Artist Card 2: YOASOBI -->
+                    <div class="artist-card" style="display: grid; grid-template-columns: 300px 1fr; gap: 3rem; align-items: start;">
+                        <div>
+                            <div class="label mb-2" style="color: var(--primary-container);">02</div>
+                            <h2 class="title mb-2" style="font-size: 2rem;">YOASOBI</h2>
+                            <p class="label" style="color: var(--primary-container); margin-bottom: 1.5rem;">ヨアソビ</p>
+                            <div style="display: flex; flex-direction: column; gap: 0.75rem; color: var(--on-surface); font-size: 0.875rem;">
+                                <p><strong>Genre:</strong> J-pop / Electronic</p>
+                                <p><strong>Formed:</strong> 2019</p>
+                                <p><strong>Members:</strong> 2</p>
                             </div>
-                            <button class="btn-secondary" style="padding: 8px 16px;">> READ_FILE</button>
+                        </div>
+                        <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+                            <p style="color: var(--on-surface); line-height: 1.8; font-weight: 100;">
+                                YOASOBI is a musical duo composed of composer Ayase and vocalist ikura. Their unique creative method is adapting novels into songs, with each song telling a complete story. "Yoru ni Kakeru" brought them instant fame, becoming an iconic J-pop duo of the digital era.
+                            </p>
+                            <div>
+                                <p class="label mb-2">Representative Works</p>
+                                <div style="display: flex; flex-wrap: wrap; gap: 0.75rem;">
+                                    <span style="padding: 0.5rem 1rem; border: 1px solid rgba(255, 255, 255, 0.5); background-color: transparent; color: var(--on-surface); font-size: 0.875rem;">Racing into the Night</span>
+                                    <span style="padding: 0.5rem 1rem; border: 1px solid rgba(255, 255, 255, 0.5); background-color: transparent; color: var(--on-surface); font-size: 0.875rem;">Idol</span>
+                                    <span style="padding: 0.5rem 1rem; border: 1px solid rgba(255, 255, 255, 0.5); background-color: transparent; color: var(--on-surface); font-size: 0.875rem;">Monster</span>
+                                    <span style="padding: 0.5rem 1rem; border: 1px solid rgba(255, 255, 255, 0.5); background-color: transparent; color: var(--on-surface); font-size: 0.875rem;">Navy Blue</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="terminal-window" style="background-color: var(--surface);">
-                        <div class="terminal-body" style="display: flex; justify-content: space-between; align-items: center; padding: 16px 24px;">
-                            <div>
-                                <h2 class="title" style="color: var(--primary); margin-bottom: 4px;">AIMER</h2>
-                                <p class="label text-cyan">CLASS: POP / ROCK / HUSKY VOCAL</p>
+                    <!-- Artist Card 3: 向井太一 -->
+                    <div class="artist-card" style="display: grid; grid-template-columns: 300px 1fr; gap: 3rem; align-items: start;">
+                        <div>
+                            <div class="label mb-2" style="color: var(--primary-container);">03</div>
+                            <h2 class="title mb-2" style="font-size: 2rem;">向井太一</h2>
+                            <p class="label" style="color: var(--primary-container); margin-bottom: 1.5rem;">むかいたいち</p>
+                            <div style="display: flex; flex-direction: column; gap: 0.75rem; color: var(--on-surface); font-size: 0.875rem;">
+                                <p><strong>Genre:</strong> R&B / Soul / J-pop</p>
+                                <p><strong>Formed:</strong> 2016</p>
+                                <p><strong>Members:</strong> 1</p>
                             </div>
-                            <button class="btn-secondary" style="padding: 8px 16px;">> READ_FILE</button>
+                        </div>
+                        <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+                            <p style="color: var(--on-surface); line-height: 1.8; font-weight: 100;">
+                                Taichi Mukai is a next-generation R&B artist in Japan, known for his delicate vocal tone and urban musical style. His music blends Western R&B and Soul with Japanese pop, creating a warm and profound listening experience.
+                            </p>
+                            <div>
+                                <p class="label mb-2">Representative Works</p>
+                                <div style="display: flex; flex-wrap: wrap; gap: 0.75rem;">
+                                    <span style="padding: 0.5rem 1rem; border: 1px solid rgba(255, 255, 255, 0.5); background-color: transparent; color: var(--on-surface); font-size: 0.875rem;">Reset</span>
+                                    <span style="padding: 0.5rem 1rem; border: 1px solid rgba(255, 255, 255, 0.5); background-color: transparent; color: var(--on-surface); font-size: 0.875rem;">FLY</span>
+                                    <span style="padding: 0.5rem 1rem; border: 1px solid rgba(255, 255, 255, 0.5); background-color: transparent; color: var(--on-surface); font-size: 0.875rem;">BLUE</span>
+                                    <span style="padding: 0.5rem 1rem; border: 1px solid rgba(255, 255, 255, 0.5); background-color: transparent; color: var(--on-surface); font-size: 0.875rem;">Pure</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Artist Card 4: Aimer -->
+                    <div class="artist-card" style="display: grid; grid-template-columns: 300px 1fr; gap: 3rem; align-items: start;">
+                        <div>
+                            <div class="label mb-2" style="color: var(--primary-container);">04</div>
+                            <h2 class="title mb-2" style="font-size: 2rem;">Aimer</h2>
+                            <p class="label" style="color: var(--primary-container); margin-bottom: 1.5rem;">エメ</p>
+                            <div style="display: flex; flex-direction: column; gap: 0.75rem; color: var(--on-surface); font-size: 0.875rem;">
+                                <p><strong>Genre:</strong> J-pop / Ballad / Rock</p>
+                                <p><strong>Formed:</strong> 2011</p>
+                                <p><strong>Members:</strong> 1</p>
+                            </div>
+                        </div>
+                        <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+                            <p style="color: var(--on-surface); line-height: 1.8; font-weight: 100;">
+                                Aimer is renowned for her distinctive "raspy voice," often called the "most beautiful broken voice." Her music spans across pop, rock, electronic and various other styles. She has performed numerous anime theme songs and is one of Japan's most beloved female vocalists.
+                            </p>
+                            <div>
+                                <p class="label mb-2">Representative Works</p>
+                                <div style="display: flex; flex-wrap: wrap; gap: 0.75rem;">
+                                    <span style="padding: 0.5rem 1rem; border: 1px solid rgba(255, 255, 255, 0.5); background-color: transparent; color: var(--on-surface); font-size: 0.875rem;">Echoes</span>
+                                    <span style="padding: 0.5rem 1rem; border: 1px solid rgba(255, 255, 255, 0.5); background-color: transparent; color: var(--on-surface); font-size: 0.875rem;">Katakoi</span>
+                                    <span style="padding: 0.5rem 1rem; border: 1px solid rgba(255, 255, 255, 0.5); background-color: transparent; color: var(--on-surface); font-size: 0.875rem;">Butterfly Knot</span>
+                                    <span style="padding: 0.5rem 1rem; border: 1px solid rgba(255, 255, 255, 0.5); background-color: transparent; color: var(--on-surface); font-size: 0.875rem;">SPARK-AGAIN</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Artist Card 5: ZUTOMAYO -->
+                    <div class="artist-card" style="display: grid; grid-template-columns: 300px 1fr; gap: 3rem; align-items: start;">
+                        <div>
+                            <div class="label mb-2" style="color: var(--primary-container);">05</div>
+                            <h2 class="title mb-2" style="font-size: 2rem;">Zutto Mayonaka</h2>
+                            <p class="label" style="color: var(--primary-container); margin-bottom: 1.5rem;">ZUTOMAYO</p>
+                            <div style="display: flex; flex-direction: column; gap: 0.75rem; color: var(--on-surface); font-size: 0.875rem;">
+                                <p><strong>Genre:</strong> J-pop / Rock / Electronic</p>
+                                <p><strong>Formed:</strong> 2018</p>
+                                <p><strong>Members:</strong> 1+</p>
+                            </div>
+                        </div>
+                        <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+                            <p style="color: var(--on-surface); line-height: 1.8; font-weight: 100;">
+                                "Zutto Mayonaka de Iinoni" (abbreviated as ZUTOMAYO) is a music project centered around the mysterious vocalist ACAね. Known for its unique visual art, complex musical arrangements, and profound lyrics, it is a representative of Japan's "internet-era music."
+                            </p>
+                            <div>
+                                <p class="label mb-2">Representative Works</p>
+                                <div style="display: flex; flex-wrap: wrap; gap: 0.75rem;">
+                                    <span style="padding: 0.5rem 1rem; border: 1px solid rgba(255, 255, 255, 0.5); background-color: transparent; color: var(--on-surface); font-size: 0.875rem;">Bite Down on the Second Hand</span>
+                                    <span style="padding: 0.5rem 1rem; border: 1px solid rgba(255, 255, 255, 0.5); background-color: transparent; color: var(--on-surface); font-size: 0.875rem;">Can't Be Correct</span>
+                                    <span style="padding: 0.5rem 1rem; border: 1px solid rgba(255, 255, 255, 0.5); background-color: transparent; color: var(--on-surface); font-size: 0.875rem;">Study More</span>
+                                    <span style="padding: 0.5rem 1rem; border: 1px solid rgba(255, 255, 255, 0.5); background-color: transparent; color: var(--on-surface); font-size: 0.875rem;">All of Those Guys at the Reunion</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="section-low" style="border-top: 1px solid var(--outline-variant);">
+            <div class="container" style="display: flex; align-items: center; justify-content: space-between; gap: 1.5rem;">
+                <p style="color: var(--on-surface); margin-bottom: 0;">Want to listen to music from these artists?</p>
+                <a href="music.html" class="btn-primary">> Explore Featured Music</a>
+            </div>
+        </section>
     </main>
 
     <script src="js/script.js"></script>

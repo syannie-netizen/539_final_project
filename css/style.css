@@ -85,7 +85,7 @@
       ----------------------------------------- */
    .display-lg {
      font-size: 3.5rem;
-     font-weight: 300;
+     font-weight: 200;
      text-transform: uppercase;
      letter-spacing: -0.02em;
      line-height: 1.1;
@@ -166,7 +166,7 @@
      padding: 12px 24px;
      text-transform: uppercase;
      text-decoration: none;
-     font-weight: bold;
+     font-weight: light;
      letter-spacing: 0.1em;
      border: none;
      cursor: pointer;
@@ -198,7 +198,7 @@
    
    /* Terminal Window Component */
    .terminal-window {
-     background-color: var(--surface-container-high);
+     background-color: var(--surface);
      border: 1px solid var(--outline-variant);
      width: 100%;
    }
@@ -222,6 +222,7 @@
    .terminal-body {
      padding: 24px;
      min-height: 250px;
+     font-weight: 100;
    }
    
    /* Cards */
@@ -262,20 +263,28 @@
    .mt-4 { margin-top: 1rem; }
    .mb-2 { margin-bottom: 0.5rem; }
    .mb-8 { margin-bottom: 2rem; }
-   .text-cyan { color: var(--primary-container); }
+   .text-cyan { color: var(--primary-container); font-size: large}
 
+   /* Artist Card Styles */
+   .artist-card {
+     position: relative;
+     border: 2px solid var(--outline-variant);
+     background-color: transparent;
+     padding: 2rem;
+     transition: all 0.5s ease-out;
+   }
 
-   /* 在 :root 和 .dark 中添加或确保 primary 颜色接近暗粉色 */
-/* 根据你的 globals.css，--primary 目前是 oklch(0.75 0.15 350)，这已经是一个漂亮的粉紫色系 */
+   .artist-card:hover {
+     border-color: var(--primary-container);
+     background-color: rgba(255, 171, 243, 0.03);
+     box-shadow: 0 0 30px -10px rgba(255, 171, 243, 0.15);
+   }
 
-@layer components {
-    .artist-card {
-      @apply relative border border-border bg-card/30 p-8 transition-all duration-500 ease-out;
-    }
+   /* Responsive Design */
+   @media (max-width: 768px) {
+     .artist-card {
+       grid-template-columns: 1fr !important;
+     }
+   }
+
   
-    /* 鼠标悬浮时的暗粉色微光效果 */
-    .artist-card:hover {
-      @apply border-primary/50 bg-primary/[0.03];
-      box-shadow: 0 0 30px -10px rgba(191, 64, 191, 0.1); /* 淡淡的粉色光晕 */
-    }
-  }
