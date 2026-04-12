@@ -24,48 +24,119 @@
     </header>
 
     <main class="container" style="padding-top: 120px; min-height: 100vh;">
-        <div class="label mb-2 text-cyan">// QUERY: SELECT * FROM TRACKS_DB</div>
-        <h1 class="display-lg mb-8" style="font-size: 2.5rem;">AUDIO_LOGS</h1>
+        <div class="label mb-2 text-cyan">// FULL TRACK LIST</div>
+        <h1 class="display-lg mb-8" style="font-size: 2.5rem;">所有歌曲</h1>
 
         <div class="terminal-window mt-4">
             <div class="terminal-header">
                 <span class="label">TRACK_INDEX.DAT</span>
             </div>
             <div class="terminal-body" style="padding: 0;">
-                <table style="width: 100%; text-align: left; border-collapse: collapse;">
-                    <thead>
-                        <tr style="border-bottom: 1px solid var(--outline-variant); background-color: var(--surface-container-low);">
-                            <th class="label" style="padding: 16px;">ID</th>
-                            <th class="label" style="padding: 16px;">TRACK_NAME</th>
-                            <th class="label" style="padding: 16px;">ARTIST</th>
-                            <th class="label" style="padding: 16px;">BPM</th>
-                            <th class="label" style="padding: 16px;">ACTION</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr style="border-bottom: 1px solid var(--outline-variant); transition: background-color 0.2s;">
-                            <td class="label text-cyan" style="padding: 16px;">0x01</td>
-                            <td style="padding: 16px; font-weight: bold;">HAKUJITSU (白日)</td>
-                            <td style="padding: 16px;">KING GNU</td>
-                            <td class="label" style="padding: 16px;">102</td>
-                            <td style="padding: 16px;"><button class="btn-secondary" style="padding: 4px 8px; font-size: 0.75rem;">> PLAY</button></td>
-                        </tr>
-                        <tr style="border-bottom: 1px solid var(--outline-variant);">
-                            <td class="label text-cyan" style="padding: 16px;">0x02</td>
-                            <td style="padding: 16px; font-weight: bold;">IDOL (アイドル)</td>
-                            <td style="padding: 16px;">YOASOBI</td>
-                            <td class="label" style="padding: 16px;">166</td>
-                            <td style="padding: 16px;"><button class="btn-secondary" style="padding: 4px 8px; font-size: 0.75rem;">> PLAY</button></td>
-                        </tr>
-                        <tr>
-                            <td class="label text-cyan" style="padding: 16px;">0x03</td>
-                            <td style="padding: 16px; font-weight: bold;">ZANKYOSANKA (残響散歌)</td>
-                            <td style="padding: 16px;">AIMER</td>
-                            <td class="label" style="padding: 16px;">171</td>
-                            <td style="padding: 16px;"><button class="btn-secondary" style="padding: 4px 8px; font-size: 0.75rem;">> PLAY</button></td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div class="track-list">
+                    <div class="track-row">
+                        <div class="track-number">01</div>
+                        <div class="track-info">
+                            <p class="track-title">白日</p>
+                            <p class="track-artist">King Gnu</p>
+                        </div>
+                        <div class="track-meta">
+                            <span>CEREMONY</span>
+                            <span>4:34</span>
+                        </div>
+                        <button class="btn-secondary track-action">▶</button>
+                    </div>
+
+                    <div class="track-row">
+                        <div class="track-number">02</div>
+                        <div class="track-info">
+                            <p class="track-title">夜に駆ける</p>
+                            <p class="track-artist">YOASOBI</p>
+                        </div>
+                        <div class="track-meta">
+                            <span>THE BOOK</span>
+                            <span>4:18</span>
+                        </div>
+                        <button class="btn-secondary track-action">▶</button>
+                    </div>
+
+                    <div class="track-row">
+                        <div class="track-number">03</div>
+                        <div class="track-info">
+                            <p class="track-title">残響散歌</p>
+                            <p class="track-artist">Aimer</p>
+                        </div>
+                        <div class="track-meta">
+                            <span>Walpurgis</span>
+                            <span>4:12</span>
+                        </div>
+                        <button class="btn-secondary track-action">▶</button>
+                    </div>
+
+                    <div class="track-row">
+                        <div class="track-number">04</div>
+                        <div class="track-info">
+                            <p class="track-title">リセット</p>
+                            <p class="track-artist">向井太一</p>
+                        </div>
+                        <div class="track-meta">
+                            <span>SAVAGE</span>
+                            <span>3:45</span>
+                        </div>
+                        <button class="btn-secondary track-action">▶</button>
+                    </div>
+
+                    <div class="track-row">
+                        <div class="track-number">05</div>
+                        <div class="track-info">
+                            <p class="track-title">秒針を噛む</p>
+                            <p class="track-artist">ずっと真夜中でいいのに。</p>
+                        </div>
+                        <div class="track-meta">
+                            <span>潜潜話</span>
+                            <span>4:26</span>
+                        </div>
+                        <button class="btn-secondary track-action">▶</button>
+                    </div>
+
+                    <div class="track-row">
+                        <div class="track-number">06</div>
+                        <div class="track-info">
+                            <p class="track-title">アイドル</p>
+                            <p class="track-artist">YOASOBI</p>
+                        </div>
+                        <div class="track-meta">
+                            <span>THE BOOK 3</span>
+                            <span>3:52</span>
+                        </div>
+                        <button class="btn-secondary track-action">▶</button>
+                    </div>
+
+                    <div class="track-row">
+                        <div class="track-number">07</div>
+                        <div class="track-info">
+                            <p class="track-title">カタオモイ</p>
+                            <p class="track-artist">Aimer</p>
+                        </div>
+                        <div class="track-meta">
+                            <span>daydream</span>
+                            <span>5:14</span>
+                        </div>
+                        <button class="btn-secondary track-action">▶</button>
+                    </div>
+
+                    <div class="track-row">
+                        <div class="track-number">08</div>
+                        <div class="track-info">
+                            <p class="track-title">BOY</p>
+                            <p class="track-artist">King Gnu</p>
+                        </div>
+                        <div class="track-meta">
+                            <span>CEREMONY</span>
+                            <span>3:38</span>
+                        </div>
+                        <button class="btn-secondary track-action">▶</button>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
