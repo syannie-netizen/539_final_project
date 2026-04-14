@@ -47,4 +47,32 @@ document.addEventListener('DOMContentLoaded', () => {
             }, line.delay);
         });
     }
+
+    // Recommend page: make genre chips selectable and keep selected values for form submit.
+    const genreChips = document.querySelectorAll('.genre-field .chip');
+    const selectedGenresInput = document.getElementById('selected-genres');
+
+    if (genreChips.length > 0) {
+        const updateSelectedGenres = () => {
+            const selectedGenres = Array.from(genreChips)
+                .filter(chip => chip.classList.contains('active'))
+                .map(chip => chip.textContent.trim());
+
+            if (selectedGenresInput) {
+                selectedGenresInput.value = selectedGenres.join(', ');
+            }
+        };
+
+        genreChips.forEach(chip => {
+            chip.setAttribute('aria-pressed', 'false');
+
+            chip.addEventListener('click', () => {
+                chip.classList.toggle('active');
+                chip.setAttribute('aria-pressed', chip.classList.contains('active') ? 'true' : 'false');
+                updateSelectedGenres();
+            });
+        });
+
+        updateSelectedGenres();
+    }
 });

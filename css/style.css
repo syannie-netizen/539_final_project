@@ -154,6 +154,25 @@
      border-top: #b6b6b64f 0.1px solid;
      padding: 5rem 0 5rem;
    }
+
+   .full-bleed-divider {
+     width: 100vw;
+     margin-left: calc(50% - 50vw);
+     margin-right: calc(50% - 50vw);
+     border-bottom: #b6b6b64f 0.1px solid;
+     margin-bottom: 3rem;
+   }
+
+   .terminal-footer {
+     padding: 1.5rem 0 2rem;
+   }
+
+   .footer-content {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     gap: 1rem;
+   }
    
    /* -----------------------------------------
       COMPONENTS
@@ -238,6 +257,16 @@
      background-color: rgba(255, 255, 255, 0.12);
      border-color: rgba(255, 255, 255, 0.2);
      outline: none;
+   }
+
+   .chip.active {
+     background-color: rgba(255, 171, 243, 0.2);
+     border-color: var(--primary-container);
+     color: #ffffff;
+   }
+
+   .genre-field .chip-list {
+     margin-bottom: 1rem;
    }
 
    .form-actions {
