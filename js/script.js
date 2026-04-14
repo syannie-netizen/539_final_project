@@ -48,6 +48,16 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // Music page: open Spotify links when play buttons are clicked
+    document.querySelectorAll('.cover-play, .track-action').forEach(btn => {
+        const url = btn.getAttribute('data-spotify');
+        if (url) {
+            btn.addEventListener('click', () => {
+                window.open(url, '_blank', 'noopener,noreferrer');
+            });
+        }
+    });
+
     // Recommend page: make genre chips selectable and keep selected values for form submit.
     const genreChips = document.querySelectorAll('.genre-field .chip');
     const selectedGenresInput = document.getElementById('selected-genres');
