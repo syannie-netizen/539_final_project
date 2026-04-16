@@ -56,18 +56,18 @@
                     <div class="recommend-form">
                         <form action="https://formspree.io/f/xnjlpllq" method="POST">
                             <div class="field-group">
-                                <label class="label text-cyan">YOUR NAME</label>
-                                <input type="text" class="terminal-input" placeholder="Enter your name (optional)">
+                                <label for="name" class="label text-cyan">YOUR NAME</label>
+                                <input type="text" id="name" name="name" class="terminal-input" placeholder="Enter your name (optional)">
                             </div>
 
                             <div class="field-group">
-                                <label class="label text-cyan">TRACK TITLE</label>
-                                <input type="text" class="terminal-input" placeholder="Enter the song title" required>
+                                <label for="track" class="label text-cyan">TRACK TITLE</label>
+                                <input type="text" id="track" name="track" class="terminal-input" placeholder="Enter the song title" required>
                             </div>
 
                             <div class="field-group">
-                                <label class="label text-cyan">ARTIST / BAND</label>
-                                <input type="text" class="terminal-input" placeholder="Enter artist or band name" required>
+                                <label for="artist" class="label text-cyan">ARTIST / BAND</label>
+                                <input type="text" id="artist" name="artist" class="terminal-input" placeholder="Enter artist or band name" required>
                             </div>
 
                             <div class="field-group genre-field">
@@ -86,13 +86,13 @@
                             </div>
 
                             <div class="field-group">
-                                <label class="label text-cyan">LINK</label>
-                                <input type="text" class="terminal-input" placeholder="Spotify / YouTube / Apple Music link">
+                                <label for="link" class="label text-cyan">LINK</label>
+                                <input type="text" id="link" name="link" class="terminal-input" placeholder="Spotify / YouTube / Apple Music link">
                             </div>
 
                             <div class="field-group">
-                                <label class="label text-cyan">WHY THIS TRACK?</label>
-                                <textarea class="terminal-input" rows="4" placeholder="Why do you recommend this song?"></textarea>
+                                <label for="reason" class="label text-cyan">WHY THIS TRACK?</label>
+                                <textarea id="reason" name="reason" class="terminal-input" rows="4" placeholder="Why do you recommend this song?"></textarea>
                             </div>
 
                             <div class="form-actions">
