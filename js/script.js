@@ -48,9 +48,52 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Music page: open Spotify links when play buttons are clicked
-    document.querySelectorAll('.cover-play, .track-action').forEach(btn => {
+    // Music page: track 01 uses local audio, other buttons keep external links.
+    const playbackButtons = document.querySelectorAll('.cover-play, .track-action');
+    const activeAudios = new Map();
+
+    const updateTrackButtons = (trackId, isPlaying) => {
+        document.querySelectorAll(`[data-track-id="${trackId}"]`).forEach(button => {
+            button.textContent = isPlaying ? '❚❚' : '▶';
+            button.setAttribute('aria-pressed', isPlaying ? 'true' : 'false');
+        });
+    };
+
+    playbackButtons.forEach(btn => {
+        const audioPath = btn.getAttribute('data-audio');
+        const trackId = btn.getAttribute('data-track-id');
         const url = btn.getAttribute('data-spotify');
+
+        if (audioPath && trackId) {
+            btn.setAttribute('aria-pressed', 'false');
+
+            btn.addEventListener('click', async () => {
+                let audio = activeAudios.get(trackId);
+
+                if (!audio) {
+                    audio = new Audio(audioPath);
+                    activeAudios.set(trackId, audio);
+
+                    audio.addEventListener('play', () => updateTrackButtons(trackId, true));
+                    audio.addEventListener('pause', () => updateTrackButtons(trackId, false));
+                    audio.addEventListener('ended', () => updateTrackButtons(trackId, false));
+                }
+
+                if (audio.paused) {
+                    try {
+                        await audio.play();
+                    } catch (error) {
+                        console.error('Audio playback failed:', error);
+                    }
+                    return;
+                }
+
+                audio.pause();
+            });
+
+            return;
+        }
+
         if (url) {
             btn.addEventListener('click', () => {
                 window.open(url, '_blank', 'noopener,noreferrer');
