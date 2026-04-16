@@ -51,6 +51,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // Music page: track 01 uses local audio, other buttons keep external links.
     const playbackButtons = document.querySelectorAll('.cover-play, .track-action');
     const activeAudios = new Map();
+    let currentPlayingTrackId = null;
+    let currentPlayingAudio = null;
 
     const updateTrackButtons = (trackId, isPlaying) => {
         document.querySelectorAll(`[data-track-id="${trackId}"]`).forEach(button => {
@@ -76,12 +78,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
                     audio.addEventListener('play', () => updateTrackButtons(trackId, true));
                     audio.addEventListener('pause', () => updateTrackButtons(trackId, false));
-                    audio.addEventListener('ended', () => updateTrackButtons(trackId, false));
+                    audio.addEventListener('ended', () => {
+                        updateTrackButtons(trackId, false);
+                        if (currentPlayingTrackId === trackId) {
+                            currentPlayingTrackId = null;
+                            currentPlayingAudio = null;
+                        }
+                    });
                 }
 
                 if (audio.paused) {
+                    if (currentPlayingAudio && currentPlayingAudio !== audio && !currentPlayingAudio.paused) {
+                        currentPlayingAudio.pause();
+                    }
+
                     try {
                         await audio.play();
+                        currentPlayingTrackId = trackId;
+                        currentPlayingAudio = audio;
                     } catch (error) {
                         console.error('Audio playback failed:', error);
                     }
@@ -89,6 +103,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
 
                 audio.pause();
+                if (currentPlayingTrackId === trackId) {
+                    currentPlayingTrackId = null;
+                    currentPlayingAudio = null;
+                }
             });
 
             return;
