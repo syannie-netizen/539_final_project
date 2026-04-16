@@ -4,6 +4,78 @@
 
    @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100..800&display=swap');
 
+/* -----------------------------------------
+   ACCESSIBILITY: Skip Link
+   ----------------------------------------- */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 1rem;
+  z-index: 9999;
+  background-color: var(--surface);
+  color: var(--primary-container);
+  border: 2px solid var(--primary-container);
+  padding: 0.75rem 1.25rem;
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  transition: top 0.1s;
+}
+.skip-link:focus {
+  top: 1rem;
+  outline: 3px solid var(--primary-container);
+  outline-offset: 2px;
+}
+
+/* -----------------------------------------
+   ACCESSIBILITY: Global Focus States
+   ----------------------------------------- */
+
+/* 默认移除 outline，改为统一自定义 */
+*:focus {
+  outline: none;
+}
+
+/* 所有可聚焦交互元素显示清晰焦点环 */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--primary-container);
+  outline-offset: 3px;
+}
+
+/* 导航链接焦点 */
+.nav-links a:focus-visible {
+  color: var(--primary-container);
+  outline: 2px solid var(--primary-container);
+  outline-offset: 4px;
+}
+
+/* 主按钮焦点 */
+.btn-primary:focus-visible,
+.btn-secondary:focus-visible {
+  outline: 2px solid var(--primary-container);
+  outline-offset: 3px;
+  background-color: rgba(255, 171, 243, 0.15);
+}
+
+/* 播放按钮焦点 */
+.cover-play:focus-visible {
+  outline: 3px solid var(--primary-container);
+  outline-offset: 2px;
+}
+
+/* 音轨操作按钮焦点 */
+.track-action:focus-visible {
+  outline: 2px solid var(--primary-container);
+  outline-offset: 2px;
+}
+
    :root {
      /* Surfaces (Depth via tonal layering) */
      --surface: #131313;
@@ -252,11 +324,16 @@
      transition: background-color 0.2s, border-color 0.2s;
    }
 
-   .chip:hover,
-   .chip:focus {
+   .chip:hover {
      background-color: rgba(255, 255, 255, 0.12);
      border-color: rgba(255, 255, 255, 0.2);
-     outline: none;
+   }
+
+   .chip:focus-visible {
+     outline: 2px solid var(--primary-container);
+     outline-offset: 2px;
+     background-color: rgba(255, 255, 255, 0.12);
+     border-color: rgba(255, 255, 255, 0.2);
    }
 
    .chip.active {
